@@ -26,11 +26,6 @@ parser.add_argument('type')
 args = parser.parse_args()
 
 if args.type == 'object_detection':
- ''' command = """
-    svn export -r 8436 https://github.com/tensorflow/models/trunk/research/object_detection &&
-    svn export -r 8436 https://github.com/tensorflow/models/trunk/research/slim &&
-    protoc object_detection/protos/*.proto --python_out=.
-  """'''
   command = """ svn export -r 8436 https://github.com/tensorflow/models/trunk/research/object_detection """
   command2 = """ svn export -r 8436 https://github.com/tensorflow/models/trunk/research/slim """
   command3 = """ protoc object_detection/protos/*.proto --python_out=. """
